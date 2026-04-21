@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Создание современных сайтов под ключ: лендинги, корпоративные порталы, интернет-магазины. Адаптивно, быстро, с SEO-базой.">
+    <title>Веб-студия | Создание сайтов под ключ</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MyStudio</a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Сайты, которые приносят клиентов</h1>
+                <p>Разрабатываю адаптивные сайты для малого и среднего бизнеса. От идеи до запуска за 7 дней.</p>
+                <a href="#contact" class="btn">Обсудить проект</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Услуги</h2>
+                <ul>
+                    <li><strong>Лендинги</strong> — быстрая конверсия посетителей в заявки</li>
+                    <li><strong>Корпоративные сайты</strong> — презентация компании и услуг</li>
+                    <li><strong>Интернет-магазины</strong> — каталог, корзина, оплата</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <h2>Портфолио</h2>
+                <p>Здесь будут кейсы с описанием задач, решений и результатов.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Связаться</h2>
+                <form action="#" method="POST">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Иван">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Опишите задачу..."></textarea>
+
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> MyStudio. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Простой скрипт для автоматического года в футере
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
