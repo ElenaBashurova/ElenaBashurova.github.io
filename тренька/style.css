@@ -1,0 +1,170 @@
+/* === 1. Сброс и база === */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* === 2. CSS-переменные (легко менять цвета) === */
+:root {
+    --color-primary: #2563eb; /* Синий акцент */
+    --color-primary-hover: #1d4ed8;
+    --color-text: #1f2937;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f9fafb;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --container-width: 1200px;
+    --border-radius: 8px;
+}
+
+/* === 3. Контейнер (центрирует контент) === */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* === 4. Типографика === */
+h1 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    margin-bottom: var(--spacing-md);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* === 5. Кнопки === */
+.btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .btn:hover {
+        background: var(--color-primary-hover);
+    }
+
+/* === 6. Секции === */
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+    section:nth-child(even) {
+        background: var(--color-bg-alt);
+    }
+
+/* === 7. Хедер === */
+header {
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+}
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+nav ul {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+    nav a:hover {
+        color: var(--color-primary);
+    }
+
+/* === 8. Форма === */
+form {
+    display: grid;
+    gap: var(--spacing-md);
+    max-width: 500px;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font: inherit;
+}
+
+    input:focus, textarea:focus {
+        outline: 2px solid var(--color-primary);
+        border-color: transparent;
+    }
+
+/* === 9. Футер === */
+footer {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+/* === 10. Адаптив (мобильные) === */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
