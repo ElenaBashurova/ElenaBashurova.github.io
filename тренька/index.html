@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <header class="site-header">
+        <div class="container header-flex">
             <a href="/" class="logo">MyWEBStudio</a>
-            <nav>
+            <button class="burger-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#portfolio">Портфолио</a></li>
@@ -74,9 +79,32 @@
         </div>
     </footer>
 
-    <script>
-        // Простой скрипт для автоматического года в футере
-        document.getElementById('year').textContent = new Date().getFullYear();
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Год в футере
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // 2. Мобильное меню (бургер)
+            const burger = document.querySelector('.burger-btn');
+            const nav = document.querySelector('.main-nav');
+
+            if (burger && nav) {
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('open');
+                });
+
+                // Закрывать меню при клике на ссылку
+                const navLinks = nav.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        nav.classList.remove('open');
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
