@@ -82,6 +82,18 @@ section {
     section:nth-child(even) {
         background: var(--color-bg-alt);
     }
+#hero{
+    background-color: var(--color-primary);  /*задаем цвет фона */
+    color: #fff; /*задаем цвет текста*/
+    text-align: center;
+    padding: 100 px 0;
+}
+
+#hero .btn{
+ background-color: #fff;
+ color: var(--color-primary);
+ margin-top: 20px;
+} 
 
 /* === 7. Хедер === */
 header {
@@ -137,7 +149,7 @@ label {
 
 input, textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 1.75rem;
     border: 1px solid #d1d5db;
     border-radius: var(--border-radius);
     font: inherit;
@@ -167,4 +179,28 @@ footer {
         flex-direction: column;
         gap: var(--spacing-md);
     }
+}
+
+#services {
+    padding: 60px 20px; /* 60px сверху/снизу, 20px слева/справа */
+}
+
+#services ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+#services li{
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    transition: box-shadow 0.3s;
+}
+
+#services li:hover {
+    box-shadow: 0 4px 12 px rgba(0,0,0,0.1);
+    border-color: var(--color-primary);
 }
