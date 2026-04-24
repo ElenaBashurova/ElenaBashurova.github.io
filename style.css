@@ -292,3 +292,28 @@ footer {
     /* Форма под палец */
     input, textarea, .btn { font-size: 16px !important; }
 }
+/* Кнопка формы связи */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* Адаптив для кнопки */
+@media (max-width: 480px) {
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+}
